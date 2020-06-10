@@ -1,0 +1,4 @@
+#Wed Jun 10 17:29:56 BRT 2020
+base.0=C\:\\Users\\etadeusi\\Documents\\Projetos\\Android\\Beca Mobile\\Movie-App-Emerson\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
