@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Movie App DB</string>
+    <string name="no_connection_description">Problema ao se conectar com a internet.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_detail_movie">DetailMovieActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="base_url">https://api.themoviedb.org/</string>
+    <string name="web_url">https://www.themoviedb.org/movie/</string>
+    <string name="web_title">Book a Movie</string>
+    <string name="api_key">3fa9058382669f72dcb18fb405b7a831</string>
+    <string name="generic_error">Oops! Something went wrong,\nPlease try again later...</string>
+    <string name="book_the_movie_button">Official Page</string>
+    <string name="genres_header">Genre</string>
+    <string name="overview_header">Overview</string>
+    <string name="duration_header">Duration</string>
+    <string name="language_header">Language</string>
+</resources>

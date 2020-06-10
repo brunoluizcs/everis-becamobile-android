@@ -1,0 +1,227 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+MERGED from [com.google.dagger:dagger-android-support:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ce48140d135d2e7eaf9b20b5586df284\jetified-dagger-android-support-2.15\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\7f4bd939dd2082e4aaa79a42a7a81e67\material-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f2ab407d522626d08855a481483af326\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4b3915f289e4f7efd3dce648364b8f6b\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f9c6eb88eb0e1ed7fe1d7b73d8aeb9fc\jetified-rxandroid-2.0.1\AndroidManifest.xml:15:1-21:12
+MERGED from [com.google.dagger:dagger-android:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\fcfe22ec671c3b4f48b596c490fde028\jetified-dagger-android-2.15\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\dfc22ab5b38aa528621fca0bd96fc365\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8d97bf214048a46662f555b8f3585ea8\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8b48490eed41efce7915a7e0742620fe\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\0d7376c4bf1ba3b77cee1bbf527bf97f\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6c6b3b469d6f647fab1de49dd93318dd\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f02e007dcd5c89a9564344647d79bd2f\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\af6648d6a470cee22e6a9cbe961868c2\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4fa2037b12dd4ed29ad4bbe29529ca7b\vectordrawable-1.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6d07c067179af20d6a201e8d15610981\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e984f44e85e725f7245b37afabe7a887\transition-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ba3cebd7825c0532f8f570d4700442da\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\956441573a42332b142166ce2938ff8c\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\3000e63527016e1f65eec11399c2399c\coordinatorlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\2520ea7ba52af64cc6a7ee1529ed87ac\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\1b3ae8df6522a90c8a1de80e11a1f864\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\35080e997af56ead831192020bddfb69\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\52f60f9b87332b939f3c82aa42b2d7a7\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6302b7a9910c8ef9e7988556c630e28f\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\be69ca6990d7bebcf00cb63c37f7a11a\versionedparcelable-1.0.0\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\648a0ec846d8099257771c7f032f6b02\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\958a2f5e6588f2b4faead4cbacad7f29\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\b6472ff239796d47d38a1c8a414b475c\lifecycle-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e9c49032098b7882ffc1969bc437f05e\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\cc6ec5863a057b974b31a49171d83c12\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\53aee3d91996553a42df4aa333608084\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ff6888ba7f82d665524a383e04590db5\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\71a243d38ef9ad6956f1bf523e71a542\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\17975bdf36531a23f08411c16426dae2\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f568c8ada71b50b24eac2fb311dca2e9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\83522414fc13a830edcfb06bef671643\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+	package
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:3:11-40
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:1-36:12
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:5:5-78
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:6:22-64
+application
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:8:5-34:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\7f4bd939dd2082e4aaa79a42a7a81e67\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\7f4bd939dd2082e4aaa79a42a7a81e67\material-1.0.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\dfc22ab5b38aa528621fca0bd96fc365\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\dfc22ab5b38aa528621fca0bd96fc365\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\be69ca6990d7bebcf00cb63c37f7a11a\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\be69ca6990d7bebcf00cb63c37f7a11a\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:14:13-39
+	android:label
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:12:13-45
+	android:roundIcon
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:13:13-58
+	android:icon
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:11:13-47
+	android:allowBackup
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:10:13-39
+	android:theme
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:15:13-44
+	android:usesCleartextTraffic
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:16:13-48
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:9:13-36
+activity#com.example.moviedb.ui.webview.OfficialPageMovieActivity
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:17:9-20:20
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:17:19-71
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:18:13-19:72
+	android:value
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:19:24-70
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:18:24-70
+activity#com.example.moviedb.ui.detail.DetailMovieActivity
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:21:9-26:20
+	android:label
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:23:17-68
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:22:17-62
+activity#com.example.moviedb.ui.main.MainActivity
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:27:9-33:20
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:27:19-55
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:28:13-32:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:29:17-68
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:31:17-76
+	android:name
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml:31:27-74
+uses-sdk
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+MERGED from [com.google.dagger:dagger-android-support:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ce48140d135d2e7eaf9b20b5586df284\jetified-dagger-android-support-2.15\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ce48140d135d2e7eaf9b20b5586df284\jetified-dagger-android-support-2.15\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\7f4bd939dd2082e4aaa79a42a7a81e67\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\7f4bd939dd2082e4aaa79a42a7a81e67\material-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f2ab407d522626d08855a481483af326\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f2ab407d522626d08855a481483af326\appcompat-1.0.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4b3915f289e4f7efd3dce648364b8f6b\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4b3915f289e4f7efd3dce648364b8f6b\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f9c6eb88eb0e1ed7fe1d7b73d8aeb9fc\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f9c6eb88eb0e1ed7fe1d7b73d8aeb9fc\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
+MERGED from [com.google.dagger:dagger-android:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\fcfe22ec671c3b4f48b596c490fde028\jetified-dagger-android-2.15\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.15] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\fcfe22ec671c3b4f48b596c490fde028\jetified-dagger-android-2.15\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\dfc22ab5b38aa528621fca0bd96fc365\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\dfc22ab5b38aa528621fca0bd96fc365\constraintlayout-1.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8d97bf214048a46662f555b8f3585ea8\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8d97bf214048a46662f555b8f3585ea8\recyclerview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8b48490eed41efce7915a7e0742620fe\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\8b48490eed41efce7915a7e0742620fe\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\0d7376c4bf1ba3b77cee1bbf527bf97f\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\0d7376c4bf1ba3b77cee1bbf527bf97f\fragment-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6c6b3b469d6f647fab1de49dd93318dd\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6c6b3b469d6f647fab1de49dd93318dd\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f02e007dcd5c89a9564344647d79bd2f\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f02e007dcd5c89a9564344647d79bd2f\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\af6648d6a470cee22e6a9cbe961868c2\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\af6648d6a470cee22e6a9cbe961868c2\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4fa2037b12dd4ed29ad4bbe29529ca7b\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\4fa2037b12dd4ed29ad4bbe29529ca7b\vectordrawable-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6d07c067179af20d6a201e8d15610981\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6d07c067179af20d6a201e8d15610981\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e984f44e85e725f7245b37afabe7a887\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e984f44e85e725f7245b37afabe7a887\transition-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ba3cebd7825c0532f8f570d4700442da\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ba3cebd7825c0532f8f570d4700442da\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\956441573a42332b142166ce2938ff8c\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\956441573a42332b142166ce2938ff8c\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\3000e63527016e1f65eec11399c2399c\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\3000e63527016e1f65eec11399c2399c\coordinatorlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\2520ea7ba52af64cc6a7ee1529ed87ac\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\2520ea7ba52af64cc6a7ee1529ed87ac\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\1b3ae8df6522a90c8a1de80e11a1f864\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\1b3ae8df6522a90c8a1de80e11a1f864\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\35080e997af56ead831192020bddfb69\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\35080e997af56ead831192020bddfb69\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\52f60f9b87332b939f3c82aa42b2d7a7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\52f60f9b87332b939f3c82aa42b2d7a7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6302b7a9910c8ef9e7988556c630e28f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\6302b7a9910c8ef9e7988556c630e28f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\edf63180a15c42b5c9a68d1dab3f3302\core-1.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\be69ca6990d7bebcf00cb63c37f7a11a\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\be69ca6990d7bebcf00cb63c37f7a11a\versionedparcelable-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\648a0ec846d8099257771c7f032f6b02\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\648a0ec846d8099257771c7f032f6b02\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\958a2f5e6588f2b4faead4cbacad7f29\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\958a2f5e6588f2b4faead4cbacad7f29\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\b6472ff239796d47d38a1c8a414b475c\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\b6472ff239796d47d38a1c8a414b475c\lifecycle-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e9c49032098b7882ffc1969bc437f05e\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\e9c49032098b7882ffc1969bc437f05e\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\cc6ec5863a057b974b31a49171d83c12\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\cc6ec5863a057b974b31a49171d83c12\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\53aee3d91996553a42df4aa333608084\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\53aee3d91996553a42df4aa333608084\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ff6888ba7f82d665524a383e04590db5\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\ff6888ba7f82d665524a383e04590db5\lifecycle-viewmodel-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\71a243d38ef9ad6956f1bf523e71a542\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\71a243d38ef9ad6956f1bf523e71a542\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\17975bdf36531a23f08411c16426dae2\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\17975bdf36531a23f08411c16426dae2\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f568c8ada71b50b24eac2fb311dca2e9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\f568c8ada71b50b24eac2fb311dca2e9\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\83522414fc13a830edcfb06bef671643\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\83522414fc13a830edcfb06bef671643\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\etadeusi\Documents\Projetos\Android\Beca Mobile\Movie-App-Emerson\app\src\main\AndroidManifest.xml
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\etadeusi\.gradle\caches\transforms-2\files-2.1\a95df0493d6350d8d4457f48c089cfc8\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
