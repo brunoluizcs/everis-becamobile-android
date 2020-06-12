@@ -1,2 +1,2 @@
+rootProject.name='S_Movies'
 include ':app'
-rootProject.name = "SeeMovies"

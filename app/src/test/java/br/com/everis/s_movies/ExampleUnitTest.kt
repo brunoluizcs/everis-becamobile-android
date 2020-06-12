@@ -1,4 +1,4 @@
-package br.com.everis.seemovies
+package br.com.everis.s_movies
 
 import org.junit.Test
 
