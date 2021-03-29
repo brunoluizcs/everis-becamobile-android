@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.os.persistableBundleOf
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
@@ -42,6 +44,7 @@ class MoviesAdapter (
         private val image: ImageView = itemView.findViewById(R.id.item_movie_image)
 
         fun bind(movie: Movie) {
+
             Glide.with(itemView)
                 .load("https://image.tmdb.org/t/p/w342${movie.poster_path}")
                 .transform(CenterCrop())
