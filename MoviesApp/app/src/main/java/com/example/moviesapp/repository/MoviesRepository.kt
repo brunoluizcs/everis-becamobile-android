@@ -11,7 +11,6 @@ class MoviesRepository(private val movieRestApiTask: MovieRestApiTask){
 
     fun getTrendingMovies(): List<Movie> {
         val request = movieRestApiTask.retrofitApi().getWeekTrendingMovies().execute()
-
         return request.body()!!.results
     }
 
