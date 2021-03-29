@@ -1,4 +1,4 @@
-package com.example.everis_becamobile_android.viewmodel
+package com.example.everis_becamobile_android
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,9 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.example.everis_becamobile_android.R
-import com.example.everis_becamobile_android.model.Movie
 
 class MoviesAdapter (
-    private var movies: List<Movie>
+    private var movies: MutableList<Movie>
 ) : RecyclerView.Adapter<MoviesAdapter.MovieViewHolder>() {
 
     override fun onCreateViewHolder(
@@ -26,11 +24,16 @@ class MoviesAdapter (
 
     override fun getItemCount(): Int = movies.size
 
-    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) = holder.bind(movies[position])
+    override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
+        holder.bind(movies[position])
+    }
 
     fun updateMovies(movies: List<Movie>) {
-        this.movies = movies
-        notifyDataSetChanged()
+        this.movies.addAll(movies)
+        notifyItemRangeInserted(
+            this.movies.size,
+            movies.size - 1
+        )
     }
 
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

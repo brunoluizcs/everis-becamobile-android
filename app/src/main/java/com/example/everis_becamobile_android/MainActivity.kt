@@ -2,40 +2,39 @@ package com.example.everis_becamobile_android
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.everis_becamobile_android.api.MoviesRetrofit
-import com.example.everis_becamobile_android.model.Movie
-import com.example.everis_becamobile_android.viewmodel.MoviesAdapter
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var trendingMovies: RecyclerView
     private lateinit var trendingMoviesAdapter: MoviesAdapter
+    private lateinit var trendingMoviesLayoutMgr: LinearLayoutManager
+
+    private var trendingMoviesPage = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         trendingMovies = findViewById(R.id.trending_movies)
-        trendingMovies.layoutManager = LinearLayoutManager(
+        trendingMoviesLayoutMgr = LinearLayoutManager(
             this,
             LinearLayoutManager.HORIZONTAL,
             false
         )
-        trendingMoviesAdapter = MoviesAdapter(listOf())
+        trendingMovies.layoutManager = trendingMoviesLayoutMgr
+        trendingMoviesAdapter = MoviesAdapter(mutableListOf())
         trendingMovies.adapter = trendingMoviesAdapter
 
-        MoviesRetrofit.getTrendingMovies(
-            onSuccess = ::onTrendingMoviesFetched,
-            onError = ::onError
-        )
-    }
+        getTrendingMovies()
 
-    private fun onTrendingMoviesFetched(movies: List<Movie>) {
-        trendingMoviesAdapter.updateMovies(movies)
+        MoviesRetrofit.getTrendingMovies(
+            trendingMoviesPage,
+            ::onTrendingMoviesFetched,
+            ::onError
+        )
     }
 
     private fun onError() {

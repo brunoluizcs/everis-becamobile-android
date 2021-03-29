@@ -1,8 +1,5 @@
-package com.example.everis_becamobile_android.api
+package com.example.everis_becamobile_android
 
-import android.util.Log
-import com.example.everis_becamobile_android.model.Movie
-import com.example.everis_becamobile_android.model.MoviesResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -10,11 +7,12 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object MoviesRetrofit {
+
     private val api: MovieApi
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/all/")
+            .baseUrl("https://api.themoviedb.org/3/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -22,9 +20,9 @@ object MoviesRetrofit {
     }
 
     fun getTrendingMovies(
-            page: Int = 1,
-            onSuccess: (movies: List<Movie>) -> Unit,
-            onError: () -> Unit
+        page: Int = 1,
+        onSuccess: (movies: List<Movie>) -> Unit,
+        onError: () -> Unit
     ) {
         api.getTrendingMovies(page = page)
             .enqueue(object : Callback<MoviesResponse> {
@@ -36,7 +34,7 @@ object MoviesRetrofit {
                        val responseBody = response.body()
 
                        if (responseBody != null) {
-                           onSuccess.invoke(responseBody.movies_results)
+                           onSuccess.invoke(responseBody.movies)
                        } else {
                            onError.invoke()
                        }
