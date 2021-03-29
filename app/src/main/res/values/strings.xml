@@ -2,5 +2,5 @@
     <string name="app_name">everis-becamobile-android</string>
     <string name="error_fetch_movies">Verifique sua conexão com a internet</string>
     <string name="trending">Tendência da semana</string>
-    <string name="mais_populares">Mais populares</string>
+    <string name="em_alta">Em alta</string>
 </resources>
