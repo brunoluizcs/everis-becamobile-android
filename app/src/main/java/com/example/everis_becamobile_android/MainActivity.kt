@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             false
         )
         trendingMovies.layoutManager = trendingMoviesLayoutMgr
-        trendingMoviesAdapter = MoviesAdapter(mutableListOf())
+        trendingMoviesAdapter = MoviesAdapter(mutableListOf()) { movie -> showMovieDetails(movie) }
         trendingMovies.adapter = trendingMoviesAdapter
 
         getTrendingMovies()
