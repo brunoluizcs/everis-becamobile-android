@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">everis-becamobile-android</string>
+    <string name="error_fetch_movies">Verifique sua conexão com a internet</string>
 </resources>

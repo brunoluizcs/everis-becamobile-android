@@ -14,14 +14,18 @@ object MoviesRetrofit {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/all/day?api_key=")
+            .baseUrl("https://api.themoviedb.org/3/all/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         api = retrofit.create(MovieApi::class.java)
     }
 
-    fun getTrendingMovies(page: Int = 1) {
+    fun getTrendingMovies(
+            page: Int = 1,
+            onSuccess: (movies: List<Movie>) -> Unit,
+            onError: () -> Unit
+    ) {
         api.getTrendingMovies(page = page)
             .enqueue(object : Callback<MoviesResponse> {
                 override fun onResponse(
@@ -32,15 +36,17 @@ object MoviesRetrofit {
                        val responseBody = response.body()
 
                        if (responseBody != null) {
-                           Log.d("Repository", "Movies: ${responseBody.movies_results}")
+                           onSuccess.invoke(responseBody.movies_results)
                        } else {
-                           Log.d("Repository", "Failed to get response")
+                           onError.invoke()
                        }
+                   } else {
+                       onError.invoke()
                    }
                 }
 
                 override fun onFailure(call: Call<MoviesResponse>, t: Throwable) {
-                    Log.e("Repository", "onFailure", t)
+                    onError.invoke()
                 }
             })
     }
