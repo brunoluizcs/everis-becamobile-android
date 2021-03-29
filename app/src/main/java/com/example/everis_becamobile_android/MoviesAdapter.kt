@@ -42,7 +42,7 @@ class MoviesAdapter (
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val image: ImageView = itemView.findViewById(R.id.item_movie_image)
-        //private val title: TextView = itemView.findViewById(R.id.item_movie_title)
+        // private val title: TextView = itemView.findViewById(R.id.item_movie_title)
         // private val releaseDate: TextView = itemView.findViewById(R.id.item_movie_release_date)
         // private val genre: TextView = itemView.findViewById(R.id.item_movie_genre)
 
