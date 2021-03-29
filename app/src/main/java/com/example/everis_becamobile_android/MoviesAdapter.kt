@@ -42,8 +42,14 @@ class MoviesAdapter (
     inner class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val image: ImageView = itemView.findViewById(R.id.item_movie_image)
+        //private val title: TextView = itemView.findViewById(R.id.item_movie_title)
+        // private val releaseDate: TextView = itemView.findViewById(R.id.item_movie_release_date)
+        // private val genre: TextView = itemView.findViewById(R.id.item_movie_genre)
 
         fun bind(movie: Movie) {
+        //title.text = movie.title
+        //releaseDate.text = movie.release_date
+        // genre.text = movie.genreIds
 
             Glide.with(itemView)
                 .load("https://image.tmdb.org/t/p/w342${movie.poster_path}")

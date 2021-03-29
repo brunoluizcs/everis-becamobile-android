@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showMovieDetails(movie: Movie) {
         val intent = Intent(this, MovieDetails::class.java)
-        intent.putExtra(MOVIE_GENRE, movie.genreIds)
+        intent.putExtra(MOVIE_GENRE, movie.genreIds[1])
         intent.putExtra(MOVIE_BACKDROP, movie.backdrop_path)
         intent.putExtra(MOVIE_POSTER, movie.poster_path)
         intent.putExtra(MOVIE_TITLE, movie.title)

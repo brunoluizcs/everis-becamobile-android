@@ -12,7 +12,7 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
     const val MOVIE_BACKDROP = "extra_movie_backdrop"
     const val MOVIE_POSTER = "extra_movie_poster"
     const val MOVIE_TITLE = "extra_movie_title"
-    const val MOVIE_RATING = "extra_movie_title"
+    const val MOVIE_RATING = "extra_movie_rating"
     const val MOVIE_RELEASE_DATE = "extra_movie_release_date"
     const val MOVIE_OVERVIEW = "extra_movie_overview"
 
@@ -32,7 +32,7 @@ class MovieDetails : AppCompatActivity() {
 
         genre = findViewById(R.id.movie_genre)
         backdrop = findViewById(R.id.movie_backdrop)
-        image = findViewById(R.id.movie_poster)
+        image = findViewById(R.id.movie_image)
         title = findViewById(R.id.movie_title)
         rating = findViewById(R.id.movie_rating)
         release_date = findViewById(R.id.movie_release_date)
@@ -53,7 +53,14 @@ class MovieDetails : AppCompatActivity() {
                 .transform(CenterCrop())
                 .into(backdrop)
         }
+        extras.getString(MOVIE_POSTER)?.let { posterPath ->
+            Glide.with(this)
+                .load("https://image.tmdb.org/t/p/w342$posterPath")
+                .transform(CenterCrop())
+                .into(image)
+        }
 
+        genre.text = extras.getString(MOVIE_GENRE, "")
         title.text = extras.getString(MOVIE_TITLE, "")
         rating.rating = extras.getFloat(MOVIE_RATING, 0f) / 2
         release_date.text = extras.getString(MOVIE_RELEASE_DATE, "")
