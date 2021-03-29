@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         trendingMovies = findViewById(R.id.trending_movies)
         trendingMoviesLayoutMgr = LinearLayoutManager(
             this,
-            LinearLayoutManager.HORIZONTAL,
+            LinearLayoutManager.VERTICAL,
             false
         )
         trendingMovies.layoutManager = trendingMoviesLayoutMgr
@@ -29,12 +29,6 @@ class MainActivity : AppCompatActivity() {
         trendingMovies.adapter = trendingMoviesAdapter
 
         getTrendingMovies()
-
-        MoviesRetrofit.getTrendingMovies(
-            trendingMoviesPage,
-            ::onTrendingMoviesFetched,
-            ::onError
-        )
     }
 
     private fun getTrendingMovies() {
@@ -60,7 +54,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 
     private fun onTrendingMoviesFetched(movies: List<Movie>) {
         trendingMoviesAdapter.updateMovies(movies)
