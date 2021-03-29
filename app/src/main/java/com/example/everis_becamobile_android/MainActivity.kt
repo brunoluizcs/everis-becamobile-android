@@ -1,5 +1,6 @@
 package com.example.everis_becamobile_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -62,5 +63,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun onError() {
         Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun showMovieDetails(movie: Movie) {
+        val intent = Intent(this, MovieDetails::class.java)
+        intent.putExtra(MOVIE_BACKDROP, movie.backdrop_path)
+        intent.putExtra(MOVIE_POSTER, movie.poster_path)
+        intent.putExtra(MOVIE_TITLE, movie.title)
+        intent.putExtra(MOVIE_RATING, movie.rating)
+        intent.putExtra(MOVIE_RELEASE_DATE, movie.release_date)
+        intent.putExtra(MOVIE_OVERVIEW, movie.overview)
+        startActivity(intent)
     }
 }
