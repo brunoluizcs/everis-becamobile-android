@@ -62,6 +62,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun onTrendingMoviesFetched(movies: List<Movie>) {
+        trendingMoviesAdapter.updateMovies(movies)
+        attachTrendingMoviesOnScrollListener()
+    }
 
     private fun onError() {
         Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
