@@ -37,6 +37,32 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    private fun getTrendingMovies() {
+        MoviesRetrofit.getTrendingMovies(
+            trendingMoviesPage,
+            ::onTrendingMoviesFetched,
+            ::onError
+        )
+    }
+
+    private fun attachTrendingMoviesOnScrollListener() {
+        trendingMovies.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                val totalItemCount = trendingMoviesLayoutMgr.itemCount
+                val visibleItemCount = trendingMoviesLayoutMgr.childCount
+                val firstVisibleItem = trendingMoviesLayoutMgr.findFirstVisibleItemPosition()
+
+                if (firstVisibleItem + visibleItemCount >= totalItemCount / 2) {
+                    trendingMovies.removeOnScrollListener(this)
+                    trendingMoviesPage++
+                    getTrendingMovies()
+                }
+            }
+        })
+    }
+
+
+
     private fun onError() {
         Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
     }
