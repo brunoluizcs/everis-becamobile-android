@@ -12,4 +12,5 @@ interface MovieApi {
         @Query("page") page: Int
     ): Call<MoviesResponse>
 
+    //https://api.themoviedb.org/3/search/movie?api_key=53d41fbff7e912a32fa93c91175866a8&language=en-US&page=1&include_adult=false&&query=Avengers
 }

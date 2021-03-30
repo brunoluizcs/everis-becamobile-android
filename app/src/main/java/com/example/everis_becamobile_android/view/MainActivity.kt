@@ -3,13 +3,17 @@ package com.example.everis_becamobile_android.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.everis_becamobile_android.*
 import com.example.everis_becamobile_android.model.Movie
+import com.example.everis_becamobile_android.viewmodel.MoviesAdapter
 import com.example.everis_becamobile_android.model.MoviesRetrofit
 import com.example.everis_becamobile_android.viewmodel.*
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
