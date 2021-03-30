@@ -8,7 +8,7 @@ import com.example.moviesapp.R
 import com.example.moviesapp.model.Movie
 import kotlinx.android.synthetic.main.movie_item_layout.view.*
 
-class MoviesAdapter(private val moviesList: List<Movie>): RecyclerView.Adapter<MoviesViewHolder>() {
+class MoviesAdapter(private val moviesList: List<Movie>, private val onClick: ((Movie) -> Unit)): RecyclerView.Adapter<MoviesViewHolder>() {
 
     companion object{
         const val IMG_BASE_URL = "https://image.tmdb.org/t/p/w500/"
@@ -22,9 +22,12 @@ class MoviesAdapter(private val moviesList: List<Movie>): RecyclerView.Adapter<M
     override fun getItemCount(): Int = moviesList.size
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
+        val movie = moviesList[position]
+
         holder.itemView.apply {
-            movieTitle.text = moviesList[position].title
-            Picasso.get().load("$IMG_BASE_URL${moviesList[position].backdropPath}").placeholder(R.drawable.ic_image_placeholder).into(movieImage)
+            movieTitle.text = movie.title
+            Picasso.get().load("$IMG_BASE_URL${movie.backdropPath}").placeholder(R.drawable.ic_image_placeholder).into(movieImage)
+            setOnClickListener{onClick(movie)}
         }
     }
 }

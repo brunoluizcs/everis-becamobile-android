@@ -1,7 +1,10 @@
 package com.example.moviesapp.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Movie (
     val id: Int,
     val adult: Boolean,
@@ -23,4 +26,4 @@ data class Movie (
     val posterPath: String,
     @SerializedName("media_type")
     val mediaType: String
-)
+): Parcelable
