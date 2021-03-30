@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.movie_item_layout.view.*
 
 class MovieDetailActivity : AppCompatActivity(){
 
-    private var movie: Movie? = null
     private lateinit var movieDetailsViewModel: MovieDetailsViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
