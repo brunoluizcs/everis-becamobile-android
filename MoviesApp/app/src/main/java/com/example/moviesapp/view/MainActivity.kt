@@ -1,11 +1,11 @@
 package com.example.moviesapp.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.moviesapp.MovieListViewModel.MovieListViewModel
+import com.example.moviesapp.viewmodel.MovieListViewModel
 import com.example.moviesapp.R
 import com.example.moviesapp.api.MovieRestApiTask
 import com.example.moviesapp.model.Movie
@@ -35,7 +35,14 @@ class MainActivity : AppCompatActivity() {
     private fun populateList(list: List<Movie>){
         trendingMovies.apply{
             hasFixedSize()
-            adapter = MoviesAdapter(list)
+            adapter = MoviesAdapter(list) {onClickItemMovie(it.id)}
         }
     }
+
+    private fun onClickItemMovie(id: Int){
+        val intent = Intent(this, MovieDetailActivity::class.java)
+        intent.putExtra("id", id)
+        startActivity(intent)
+    }
+
 }
