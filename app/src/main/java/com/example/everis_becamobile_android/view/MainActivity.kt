@@ -1,13 +1,15 @@
-package com.example.everis_becamobile_android
+package com.example.everis_becamobile_android.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.everis_becamobile_android.*
+import com.example.everis_becamobile_android.model.Movie
+import com.example.everis_becamobile_android.model.MoviesRetrofit
+import com.example.everis_becamobile_android.viewmodel.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,9 +38,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun getTrendingMovies() {
         MoviesRetrofit.getTrendingMovies(
-            trendingMoviesPage,
-            ::onTrendingMoviesFetched,
-            ::onError
+                trendingMoviesPage,
+                ::onTrendingMoviesFetched,
+                ::onError
         )
     }
 

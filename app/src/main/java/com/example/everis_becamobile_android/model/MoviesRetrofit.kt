@@ -1,4 +1,4 @@
-package com.example.everis_becamobile_android
+package com.example.everis_becamobile_android.model
 
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,15 +20,15 @@ object MoviesRetrofit {
     }
 
     fun getTrendingMovies(
-        page: Int = 1,
-        onSuccess: (movies: List<Movie>) -> Unit,
-        onError: () -> Unit
+            page: Int = 1,
+            onSuccess: (movies: List<Movie>) -> Unit,
+            onError: () -> Unit
     ) {
         api.getTrendingMovies(page = page)
             .enqueue(object : Callback<MoviesResponse> {
                 override fun onResponse(
-                    call: Call<MoviesResponse>,
-                    response: Response<MoviesResponse>
+                        call: Call<MoviesResponse>,
+                        response: Response<MoviesResponse>
                 ) {
                    if (response.isSuccessful) {
                        val responseBody = response.body()

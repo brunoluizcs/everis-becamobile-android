@@ -1,4 +1,4 @@
-package com.example.everis_becamobile_android
+package com.example.everis_becamobile_android.model
 
 import retrofit2.Call
 import retrofit2.http.GET

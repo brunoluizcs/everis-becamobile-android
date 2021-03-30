@@ -1,4 +1,4 @@
-package com.example.everis_becamobile_android
+package com.example.everis_becamobile_android.model
 
 import com.google.gson.annotations.SerializedName
 

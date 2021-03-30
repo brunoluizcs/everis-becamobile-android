@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Everisbecamobileandroid">
         <activity android:name=".MovieDetails"></activity>
         <activity android:name=".GenresDetails"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
