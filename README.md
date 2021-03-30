@@ -26,10 +26,11 @@ são passados os valores da api_key, o caminho (URL) de onde serão recebidas as
 	Com as classes da API prontas, foi criado um Object MoviesRetrofit para fazer o tratamento do JSON, juntando
 as chaves do MovieApi para realizar uma conexão com a API.
 	Terminada a parte relacionada a API, o próximo passo foi a criação do Layout. O Layout foi dividido em três telas:
--> activity_main - Composto por um RecyclerView para poder diversos itens em lista;
--> activity_movie_details - Ao clicar na imagem mostrada no activity_main o usuário é redirecionado para os detalhes do filme,
+  
+  - activity_main: Composto por um RecyclerView para poder diversos itens em lista;
+  - activity_movie_details: Ao clicar na imagem mostrada no activity_main o usuário é redirecionado para os detalhes do filme,
 que são mostrados aqui;
--> activity_item_movie - Um ImageView simples que alimenta o RecyclerView do activity_main.
+  - activity_item_movie: Um ImageView simples que alimenta o RecyclerView do activity_main.
 
 	A classe MoviesAdapter é a responsável por alimentar a activity_item_movie com a imagem dos filmes. Também é nela
 que a função de click e atualização de paginação foram criadas. 
@@ -51,7 +52,7 @@ activity_movie_details.
 	Lifecycle foi utilizado para deixar o app mais leve quanto ao carregamento da paginação (pelo menos eu acho que é pra isso);
 	Gson foi utilizado para converter a API(Json) em objetos Java.
 	
-	Em questão da utilização da API eu tive alguns problemas para acessar informações mais "profudas", como as informações de 
-Gênero do filme. A parte da arquitetura tenho 99% de certeza que não fiz certo, mas tentei.
-	No geral, o app não foi tão complicado de fazer, pois foi basicamente o visto no bootcamp. A parte mais complicada ainda é a OO
-, por diversas vezes eu utilizava métodos que nem lembrava de onde vinham.
+	Em questão da utilização da API eu tive alguns problemas para acessar informações mais "profudas", como as informações de Gênero do filme. 
+	A parte da arquitetura tenho 99% de certeza que não fiz certo, mas tentei.
+	No geral, o app não foi tão complicado de fazer, pois foi basicamente o visto no bootcamp. A parte mais complicada ainda é a OO, 
+por diversas vezes eu utilizava métodos que nem lembrava de onde vinham.
