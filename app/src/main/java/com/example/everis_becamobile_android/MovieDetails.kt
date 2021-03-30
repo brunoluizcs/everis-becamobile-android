@@ -8,7 +8,6 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 
-    const val MOVIE_GENRE = "extra_movie_genre"
     const val MOVIE_BACKDROP = "extra_movie_backdrop"
     const val MOVIE_POSTER = "extra_movie_poster"
     const val MOVIE_TITLE = "extra_movie_title"
@@ -18,7 +17,6 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 
 class MovieDetails : AppCompatActivity() {
 
-    private lateinit var genre: TextView
     private lateinit var backdrop: ImageView
     private lateinit var image: ImageView
     private lateinit var title: TextView
@@ -30,7 +28,6 @@ class MovieDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
 
-        genre = findViewById(R.id.movie_genre)
         backdrop = findViewById(R.id.movie_backdrop)
         image = findViewById(R.id.movie_image)
         title = findViewById(R.id.movie_title)
@@ -60,7 +57,6 @@ class MovieDetails : AppCompatActivity() {
                 .into(image)
         }
 
-        genre.text = extras.getString(MOVIE_GENRE, "")
         title.text = extras.getString(MOVIE_TITLE, "")
         rating.rating = extras.getFloat(MOVIE_RATING, 0f) / 2
         release_date.text = extras.getString(MOVIE_RELEASE_DATE, "")

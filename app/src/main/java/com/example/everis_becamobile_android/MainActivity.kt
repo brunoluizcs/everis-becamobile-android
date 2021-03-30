@@ -3,6 +3,8 @@ package com.example.everis_becamobile_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -64,10 +66,8 @@ class MainActivity : AppCompatActivity() {
     private fun onError() {
         Toast.makeText(this, getString(R.string.error_fetch_movies), Toast.LENGTH_SHORT).show()
     }
-
     private fun showMovieDetails(movie: Movie) {
         val intent = Intent(this, MovieDetails::class.java)
-        intent.putExtra(MOVIE_GENRE, movie.genreIds[1])
         intent.putExtra(MOVIE_BACKDROP, movie.backdrop_path)
         intent.putExtra(MOVIE_POSTER, movie.poster_path)
         intent.putExtra(MOVIE_TITLE, movie.title)
