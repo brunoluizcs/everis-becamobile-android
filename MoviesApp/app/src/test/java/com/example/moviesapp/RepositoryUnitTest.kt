@@ -1,6 +1,7 @@
 package com.example.moviesapp
 
 import com.example.moviesapp.api.MovieRestApiTask
+import com.example.moviesapp.model.Movie
 import com.example.moviesapp.model.MoviesResult
 import com.example.moviesapp.repository.MoviesRepository
 import org.junit.Test
@@ -15,17 +16,34 @@ import retrofit2.Response
  */
 class RepositoryUnitTest {
     @Test
-    fun testSuccesfullApiRequest(){
-        val request = mockApiRequest()
+    fun testSuccesfullApiTrendingRequest(){
+        val request = mockApiTrendingRequest()
         val successfullRequest = request.isSuccessful
 
-        assertEquals(true, successfullRequest)
+        println(request.message())
 
+        assertEquals(true, successfullRequest)
     }
 
-    private fun mockApiRequest(): Response<MoviesResult> {
+    @Test
+    fun testSuccesfullApiDetailsRequest(){
+        val requestResults = mockApiTrendingRequest()
+        val movieId = requestResults.body()?.results?.get(0)?.id
+        val requestMovie = movieId?.let { mockApiMovieDetailsRequest(it) }
+        val successfullRequest = requestMovie?.isSuccessful
+
+        assertEquals(true, successfullRequest)
+    }
+
+
+    private fun mockApiMovieDetailsRequest(id: Int): Response<Movie>{
         val movieRestApiTask = MovieRestApiTask()
-        val movieRepository = MoviesRepository(movieRestApiTask)
+        val request = movieRestApiTask.retrofitApi().getMovieDetails(id).execute()
+        return request
+    }
+
+    private fun mockApiTrendingRequest(): Response<MoviesResult> {
+        val movieRestApiTask = MovieRestApiTask()
         val request = movieRestApiTask.retrofitApi().getWeekTrendingMovies().execute()
         return request
     }
