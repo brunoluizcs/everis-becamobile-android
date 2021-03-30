@@ -16,11 +16,16 @@ As bibliotecas abaixo podem ajuda-lo a lidar com alguns desafios deste projeto.
 
 
 ------------------------------------------------------------------------------
+# Sobre a avaliação
 
 App foi construido utilizando Retrofit para consumir a informações JSON, onde duas classes foram criadas para receber os valores da API. 
+
 A primeira classe, chamada MovieResponse, recebeu as informações mais externos: page, total_pages e uma lista de results). 
+
 A segunda classe, chamada Movie, recebeu as informações internas do 'results' (id, title, overview, poster_path, backdrop_path, vote_avreage, release_date). 
+
 Após determinar quais informações seriam pertinentes ao desenvolvimento do aplicativo, foi criada uma Interface MovieApi onde são passados os valores da api_key, o caminho (URL) de onde serão recebidas as informações e o ID da página.
+
 Com as classes da API prontas, foi criado um Object MoviesRetrofit para fazer o tratamento do JSON, juntando as chaves do MovieApi para realizar uma conexão com a API.
 Terminada a parte relacionada a API, o próximo passo foi a criação do Layout. O Layout foi dividido em três telas:
   
@@ -30,6 +35,7 @@ que são mostrados aqui;
 - activity_item_movie: Um ImageView simples que alimenta o RecyclerView do activity_main.
 
 A classe MoviesAdapter é a responsável por alimentar a activity_item_movie com a imagem dos filmes. Também é nela que a função de click e atualização de paginação foram criadas. 
+
 Na MainActivity foram chamadas as funções para exibição das informações da API e alimentação dos Layouts. Também foi criada a função de paginação ao descer a tela (a quantidade de filmes exposta vai aumentando ao rolar a tela para baixo) e	a função para chamada da classe MovieDetails.
 
 A classe MovieDetails recebe por Intent as informações extras sobre os filmes. Essa classe foi feita unicamente para popular o activity_movie_details.
