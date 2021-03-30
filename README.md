@@ -17,14 +17,8 @@ As bibliotecas abaixo podem ajuda-lo a lidar com alguns desafios deste projeto.
 
 ------------------------------------------------------------------------------
 
-	App foi construido utilizando Retrofit para consumir a informações JSON, onde duas classes foram
-criadas para receber os valores da API. A primeira classe, chamada MovieResponse, recebeu as informações mais 
-externos: page, total_pages e uma lista de results). A segunda classe, chamada Movie, recebeu as informações
-internas do 'results' (id, title, overview, poster_path, backdrop_path, vote_avreage, release_date). Após determinar
-quais informações seriam pertinentes ao desenvolvimento do aplicativo, foi criada uma Interface MovieApi onde 
-são passados os valores da api_key, o caminho (URL) de onde serão recebidas as informações e o ID da página.
-	Com as classes da API prontas, foi criado um Object MoviesRetrofit para fazer o tratamento do JSON, juntando
-as chaves do MovieApi para realizar uma conexão com a API.
+	App foi construido utilizando Retrofit para consumir a informações JSON, onde duas classes foram criadas para receber os valores da API. A primeira classe, chamada MovieResponse, recebeu as informações mais externos: page, total_pages e uma lista de results). A segunda classe, chamada Movie, recebeu as informações internas do 'results' (id, title, overview, poster_path, backdrop_path, vote_avreage, release_date). Após determinar quais informações seriam pertinentes ao desenvolvimento do aplicativo, foi criada uma Interface MovieApi onde são passados os valores da api_key, o caminho (URL) de onde serão recebidas as informações e o ID da página.
+	Com as classes da API prontas, foi criado um Object MoviesRetrofit para fazer o tratamento do JSON, juntando as chaves do MovieApi para realizar uma conexão com a API.
 	Terminada a parte relacionada a API, o próximo passo foi a criação do Layout. O Layout foi dividido em três telas:
   
   - activity_main: Composto por um RecyclerView para poder diversos itens em lista;
