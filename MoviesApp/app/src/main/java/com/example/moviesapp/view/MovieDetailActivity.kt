@@ -25,7 +25,7 @@ class MovieDetailActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.movie_details)
         movieDetailsViewModel = ViewModelProvider.NewInstanceFactory().create(MovieDetailsViewModel::class.java)
-        movieDetailsViewModel.init(intent.getIntExtra("id", -1))
+        movieDetailsViewModel.init(intent.getIntExtra("id", -1), applicationContext)
 
         initToolbar()
         initObserver()
@@ -71,6 +71,8 @@ class MovieDetailActivity : AppCompatActivity(){
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
+
+
 
     override fun onSupportNavigateUp(): Boolean{
         finish()
