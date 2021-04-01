@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/moviePoster"
+        android:id="@+id/movieDetailsPoster"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:foreground="@drawable/alpha_gradient_foreground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/starRate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/star_rate"
+        app:layout_constraintBottom_toTopOf="@id/movieDetailsTitle"
+        app:layout_constraintStart_toStartOf="@id/movieDetailsTitle"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieDetailsRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/movie_title_color"
+        android:textSize="18sp"
+        tools:text="5.0"
+        app:layout_constraintBottom_toTopOf="@id/movieDetailsTitle"
+        app:layout_constraintStart_toEndOf="@id/starRate"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/movie_title_color"
+        android:textSize="24sp"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="24dp"
+        android:paddingLeft="4dp"
+        tools:text="Exemplo filme"
+        app:layout_constraintTop_toTopOf="@id/movieDetailsPoster"
+        app:layout_constraintBottom_toBottomOf="@id/movieDetailsPoster"
+        app:layout_constraintStart_toStartOf="@id/movieDetailsPoster"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/movieDetailsOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:textColor="@color/movie_title_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="24dp"
+        tools:text="Exemplo de Overview"
+        app:layout_constraintTop_toBottomOf="@id/movieDetailsTitle"
+        app:layout_constraintStart_toStartOf="@id/movieDetailsPoster"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/alpha_gradient_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
