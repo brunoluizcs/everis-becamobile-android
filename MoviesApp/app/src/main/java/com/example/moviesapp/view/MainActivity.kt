@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         movieListViewModel = ViewModelProvider.NewInstanceFactory().create(MovieListViewModel::class.java)
-        movieListViewModel.init()
+        movieListViewModel.init(applicationContext)
         initObserver()
         loadingVisibility(true)
     }
