@@ -1,7 +1,10 @@
 package com.example.moviesapp.view
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.lifecycle.Observer
@@ -43,6 +46,7 @@ class MovieDetailActivity : AppCompatActivity(){
         movieDetailsRate.text = movie.voteAverage.toString()
         movieDetailsTitle.text = movie.title
         movieDetailsOverview.text = movie.overview
+        starRate.visibility = View.VISIBLE
     }
 
     private fun loadImage(imageView: AppCompatImageView, movie: Movie){
@@ -52,7 +56,9 @@ class MovieDetailActivity : AppCompatActivity(){
             }
 
             override fun onError(e: Exception?) {
-
+                loadingVisibility(false)
+                Log.i("MovieDetailActivity", e.toString())
+                Toast.makeText(applicationContext, "Unable to load image", Toast.LENGTH_SHORT).show()
             }
         })
     }
