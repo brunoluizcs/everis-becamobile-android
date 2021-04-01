@@ -3,14 +3,13 @@ package com.example.moviesapp.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.moviesapp.viewmodel.MovieListViewModel
 import com.example.moviesapp.R
-import com.example.moviesapp.api.MovieRestApiTask
 import com.example.moviesapp.model.Movie
 import com.example.moviesapp.repository.MoviesAdapter
-import com.example.moviesapp.repository.MoviesRepository
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,11 +23,15 @@ class MainActivity : AppCompatActivity() {
         movieListViewModel = ViewModelProvider.NewInstanceFactory().create(MovieListViewModel::class.java)
         movieListViewModel.init()
         initObserver()
+        loadingVisibility(true)
     }
 
     private fun initObserver(){
         movieListViewModel.moviesList.observe(this, Observer {
-            populateList(it)
+            if(it.isNotEmpty()){
+                populateList(it)
+                loadingVisibility(false)
+            }
         })
     }
 
@@ -43,6 +46,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, MovieDetailActivity::class.java)
         intent.putExtra("id", id)
         startActivity(intent)
+    }
+
+    private fun loadingVisibility(isLoading: Boolean){
+        progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
 }
