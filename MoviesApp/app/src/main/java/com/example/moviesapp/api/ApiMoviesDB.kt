@@ -2,12 +2,9 @@ package com.example.moviesapp.api
 
 import com.example.moviesapp.model.Movie
 import com.example.moviesapp.model.MoviesResult
-import org.json.JSONObject
 import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface ApiMoviesDB {
 
