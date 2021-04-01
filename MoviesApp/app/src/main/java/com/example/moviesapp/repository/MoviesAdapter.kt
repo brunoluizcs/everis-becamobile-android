@@ -26,6 +26,7 @@ class MoviesAdapter(private val moviesList: List<Movie>, private val onClick: ((
 
         holder.itemView.apply {
             movieTitle.text = movie.title
+            movieRate.text = movie.voteAverage.toString()
             Picasso.get().load("$IMG_BASE_URL${movie.backdropPath}").placeholder(R.drawable.ic_image_placeholder).into(movieImage)
             setOnClickListener{onClick(movie)}
         }
