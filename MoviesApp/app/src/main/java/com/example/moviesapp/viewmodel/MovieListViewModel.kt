@@ -20,12 +20,12 @@ class MovieListViewModel: ViewModel() {
     val moviesList: LiveData<List<Movie>>
         get() = _moviesList
 
-    fun init(){
-        getTrendingMovies()
+    fun init(context: Context){
+        getTrendingMovies(context)
     }
 
-    private fun getTrendingMovies(){
-        _moviesList.postValue(moviesRepository.getTrendingMovies())
+    private fun getTrendingMovies(context: Context){
+        moviesRepository.getTrendingMovies(context, ::onRequestSuccess, ::onRequestError)
     }
 
     private fun onRequestSuccess(list: List<Movie>){
@@ -33,10 +33,6 @@ class MovieListViewModel: ViewModel() {
     }
 
     private fun onRequestError(context: Context, code: Int?){
-        if(code != null){
-            Toast.makeText(context, "Error $code", Toast.LENGTH_SHORT)
-        }else{
-            Toast.makeText(context, "Unable to load movie details", Toast.LENGTH_SHORT)
-        }
+        Toast.makeText(context, "Error $code", Toast.LENGTH_SHORT)
     }
 }
