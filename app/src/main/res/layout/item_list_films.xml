@@ -8,6 +8,7 @@
     android:padding="8dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clickable="true"
@@ -39,24 +40,49 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tv_item_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
                     tools:text="Titulo" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/tv_item_genere"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
                     tools:text="Genero: " />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_item_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="2"
                     tools:text="Descrição:" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:numStars="5"
+                        android:stepSize="0.1"
+                        android:isIndicator="true" />
+
+                    <TextView
+                        android:id="@+id/tv_item_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="num"/>
+                </LinearLayout>
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
