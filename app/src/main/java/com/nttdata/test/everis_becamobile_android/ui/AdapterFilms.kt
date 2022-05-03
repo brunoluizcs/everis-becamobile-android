@@ -1,15 +1,12 @@
 package com.nttdata.test.everis_becamobile_android.ui
 
-import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.nttdata.test.everis_becamobile_android.databinding.ItemListFilmsBinding
-import com.nttdata.test.everis_becamobile_android.model.JsonFilms
 import com.nttdata.test.everis_becamobile_android.model.Result
 
 class AdapterFilms: ListAdapter<Result,AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
@@ -39,9 +36,15 @@ class AdapterFilms: ListAdapter<Result,AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
             }
             binding.tvItemDescription.text = film.overview
 
+            Glide.with(binding.root.context)
+                .load("https://image.tmdb.org/t/p/original${film.poster_path}")
+                .centerCrop()
+                .into(binding.imageView)
+
             binding.cvItem.setOnClickListener {
                 onClickListener?.invoke(film.id)
             }
+
 
         }
     }
