@@ -5,7 +5,9 @@ import android.os.Bundle
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
 import com.nttdata.test.everis_becamobile_android.client.IDetailsFilmsClient
+import com.nttdata.test.everis_becamobile_android.client.IGenreClient
 import com.nttdata.test.everis_becamobile_android.databinding.ActivityDetailsBinding
+import com.nttdata.test.everis_becamobile_android.model.Genre
 import com.nttdata.test.everis_becamobile_android.model.details_films.DetailsFilmsOb
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,6 +29,7 @@ class DetailsActivity : AppCompatActivity() {
     private val detailsFilmsClient: IDetailsFilmsClient by lazy {
         retrofit.create(IDetailsFilmsClient::class.java)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -39,12 +42,13 @@ class DetailsActivity : AppCompatActivity() {
     private fun getData() {
         lifecycleScope.launch {
             var details: DetailsFilmsOb? = null
+
             withContext(Dispatchers.IO){
-                var result = detailsFilmsClient.getDetailsFilms(filmId,"pt-BR")
-                if (result.id == null){
-                    result = detailsFilmsClient.getDetailsDefault(filmId)
+                var resultDetails = detailsFilmsClient.getDetailsFilms(filmId,"pt-BR")
+                if (resultDetails.id == null){
+                    resultDetails = detailsFilmsClient.getDetailsDefault(filmId)
                 }
-                details = result
+                details = resultDetails
             }
             details?.let { setupUi(it) }
         }

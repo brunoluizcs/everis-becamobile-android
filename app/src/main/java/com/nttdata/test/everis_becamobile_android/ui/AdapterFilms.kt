@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nttdata.test.everis_becamobile_android.client.IGenreClient
 import com.nttdata.test.everis_becamobile_android.databinding.ItemListFilmsBinding
+import com.nttdata.test.everis_becamobile_android.model.AdapterHelperClass
 import com.nttdata.test.everis_becamobile_android.model.Genre
-import com.nttdata.test.everis_becamobile_android.model.trending_films.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class AdapterFilms : ListAdapter<Result, AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
+class AdapterFilms : ListAdapter<AdapterHelperClass, AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
     var onClickListener: ((filmId: Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,21 +34,63 @@ class AdapterFilms : ListAdapter<Result, AdapterFilms.ViewHolder>(DIFF_CALLBACK)
         private val binding: ItemListFilmsBinding,
         private val onClickListener: ((filmId: Int) -> Unit)? = null
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(film: Result) {
-            binding.ratingBar.rating = film.vote_average.toFloat() / 2
-            binding.tvItemRating.text = film.vote_average.toString()
-            if (!film.title.isNullOrEmpty()){
-                binding.tvItemTitle.text = film.title
+        fun bind(helper: AdapterHelperClass) {
+            binding.ratingBar.rating = helper.film?.vote_average?.toFloat()!! / 2
+            binding.tvItemRating.text = helper.film?.vote_average.toString()
+            if (!helper.film?.title.isNullOrEmpty()) {
+                binding.tvItemTitle.text = helper.film?.title
             }
-            if(film.name != null && film.title.isNullOrEmpty()){
+            if (helper.film?.name != null && helper.film?.title.isNullOrEmpty()) {
                 try {
-                    binding.tvItemTitle.text = film.name
-                }catch (e:Exception){
+                    binding.tvItemTitle.text = helper.film?.name
+                } catch (e: Exception) {
                     e.printStackTrace()
                     binding.tvItemTitle.text = "no title"
                 }
             }
 
+            var str = ""
+                helper.listGenre?.forEach { filmGenreId ->
+                    if (helper.film!!.genre_ids.contains(filmGenreId.id)){
+                        str += filmGenreId.name+", "
+
+                    }
+                }
+            binding.tvItemGenere.text = str.dropLast(2)
+
+            binding.tvItemDescription.text = helper.film!!.overview
+
+            Glide.with(binding.root.context)
+                .load("https://image.tmdb.org/t/p/original${helper.film!!.poster_path}")
+                .centerCrop()
+                .into(binding.imageView)
+
+            binding.cvItem.setOnClickListener {
+                onClickListener?.invoke(helper.film!!.id)
+            }
+        }
+    }
+
+
+//    class ViewHolder(
+//        private val binding: ItemListFilmsBinding,
+//        private val onClickListener: ((filmId: Int) -> Unit)? = null
+//    ) : RecyclerView.ViewHolder(binding.root) {
+//        fun bind(helper: AdapterHelperClass) {
+//            binding.ratingBar.rating = film.vote_average.toFloat() / 2
+//            binding.tvItemRating.text = film.vote_average.toString()
+//            if (!film.title.isNullOrEmpty()){
+//                binding.tvItemTitle.text = film.title
+//            }
+//            if(film.name != null && film.title.isNullOrEmpty()){
+//                try {
+//                    binding.tvItemTitle.text = film.name
+//                }catch (e:Exception){
+//                    e.printStackTrace()
+//                    binding.tvItemTitle.text = "no title"
+//                }
+//            }
+//
 //            GlobalScope.launch {
 //                var listGenre:List<Genre> = emptyList()
 //                withContext(Dispatchers.IO){
@@ -68,34 +110,53 @@ class AdapterFilms : ListAdapter<Result, AdapterFilms.ViewHolder>(DIFF_CALLBACK)
 //
 //                    }
 //                }
-
-
-
-            binding.tvItemDescription.text = film.overview
-
-            Glide.with(binding.root.context)
-                .load("https://image.tmdb.org/t/p/original${film.poster_path}")
-                .centerCrop()
-                .into(binding.imageView)
-
-            binding.cvItem.setOnClickListener {
-                onClickListener?.invoke(film.id)
-            }
-
-
-        }
-    }
+//
+//
+//
+//            binding.tvItemDescription.text = film.overview
+//
+//            Glide.with(binding.root.context)
+//                .load("https://image.tmdb.org/t/p/original${film.poster_path}")
+//                .centerCrop()
+//                .into(binding.imageView)
+//
+//            binding.cvItem.setOnClickListener {
+//                onClickListener?.invoke(film.id)
+//            }
+//
+//
+//        }
+//    }
 
     companion object {
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Result>() {
-            override fun areItemsTheSame(oldItem: Result, newItem: Result): Boolean {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<AdapterHelperClass>() {
+            override fun areItemsTheSame(
+                oldItem: AdapterHelperClass,
+                newItem: AdapterHelperClass
+            ): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: Result, newItem: Result): Boolean {
+            override fun areContentsTheSame(
+                oldItem: AdapterHelperClass,
+                newItem: AdapterHelperClass
+            ): Boolean {
                 return oldItem == newItem
             }
 
         }
     }
+
+//    companion object {
+//        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Result>() {
+//            override fun areItemsTheSame(oldItem: Result, newItem: Result): Boolean {
+//                return oldItem.id == newItem.id
+//            }
+//
+//            override fun areContentsTheSame(oldItem: Result, newItem: Result): Boolean {
+//                return oldItem == newItem
+//            }
+//
+//        }
+//    }
 }
