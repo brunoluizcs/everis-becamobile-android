@@ -1,6 +1,6 @@
-package com.nttdata.test.everis_becamobile_android.model
+package com.nttdata.test.everis_becamobile_android.model.details_films
 
-data class DetailsFilm(
+data class DetailsFilmsOb(
     val adult: Boolean,
     val backdrop_path: String,
     val belongs_to_collection: BelongsToCollection,

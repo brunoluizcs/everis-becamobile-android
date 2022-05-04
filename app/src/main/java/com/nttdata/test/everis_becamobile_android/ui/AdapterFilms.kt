@@ -6,15 +6,24 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.nttdata.test.everis_becamobile_android.client.IGenreClient
 import com.nttdata.test.everis_becamobile_android.databinding.ItemListFilmsBinding
-import com.nttdata.test.everis_becamobile_android.model.Result
+import com.nttdata.test.everis_becamobile_android.model.Genre
+import com.nttdata.test.everis_becamobile_android.model.trending_films.Result
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-class AdapterFilms: ListAdapter<Result,AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
-    var onClickListener:((filmId:Int)->Unit)? = null
+class AdapterFilms : ListAdapter<Result, AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
+    var onClickListener: ((filmId: Int) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemListFilmsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        return ViewHolder(binding,onClickListener)
+        val binding =
+            ItemListFilmsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding, onClickListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -23,17 +32,45 @@ class AdapterFilms: ListAdapter<Result,AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
 
     class ViewHolder(
         private val binding: ItemListFilmsBinding,
-        private val onClickListener: ((filmId:Int)->Unit)? = null
-    ):RecyclerView.ViewHolder(binding.root){
-        fun bind(film:Result){
-            binding.ratingBar.rating = film.vote_average.toFloat()/2
+        private val onClickListener: ((filmId: Int) -> Unit)? = null
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(film: Result) {
+            binding.ratingBar.rating = film.vote_average.toFloat() / 2
             binding.tvItemRating.text = film.vote_average.toString()
-            binding.tvItemTitle.text = film.title
-            if (film.adult){
-                binding.tvItemGenere.text = "Adulto"
-            }else{
-                binding.tvItemGenere.text = "Livre"
+            if (!film.title.isNullOrEmpty()){
+                binding.tvItemTitle.text = film.title
             }
+            if(film.name != null && film.title.isNullOrEmpty()){
+                try {
+                    binding.tvItemTitle.text = film.name
+                }catch (e:Exception){
+                    e.printStackTrace()
+                    binding.tvItemTitle.text = "no title"
+                }
+            }
+
+//            GlobalScope.launch {
+//                var listGenre:List<Genre> = emptyList()
+//                withContext(Dispatchers.IO){
+//                    val retrofit = Retrofit.Builder()
+//                        .baseUrl("https://api.themoviedb.org/3/")
+//                        .addConverterFactory(GsonConverterFactory.create())
+//                        .build()
+//                    val result = retrofit.create(IGenreClient::class.java)
+//
+//                    listGenre = result.getGenresDefault().genres
+//                }
+//                var str:String = ""
+//                listGenre.forEach { filmGenreId ->
+//                    if (film.genre_ids.contains(filmGenreId.id)){
+//                        str += filmGenreId.name+" ,"
+//                        binding.tvItemGenere.text = str
+//
+//                    }
+//                }
+
+
+
             binding.tvItemDescription.text = film.overview
 
             Glide.with(binding.root.context)
@@ -49,8 +86,8 @@ class AdapterFilms: ListAdapter<Result,AdapterFilms.ViewHolder>(DIFF_CALLBACK) {
         }
     }
 
-    companion object{
-        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Result>(){
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Result>() {
             override fun areItemsTheSame(oldItem: Result, newItem: Result): Boolean {
                 return oldItem.id == newItem.id
             }

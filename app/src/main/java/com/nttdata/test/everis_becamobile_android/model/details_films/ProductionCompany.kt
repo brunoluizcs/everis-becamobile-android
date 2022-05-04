@@ -1,4 +1,4 @@
-package com.nttdata.test.everis_becamobile_android.model
+package com.nttdata.test.everis_becamobile_android.model.details_films
 
 data class ProductionCompany(
     val id: Int,
