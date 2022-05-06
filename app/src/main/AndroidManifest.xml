@@ -20,8 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MovieDetailsActivity"
-            android:exported = "true"/>
+        <activity android:name=".MovieDetails"
+            android:exported="true"/>
     </application>
 
 </manifest>

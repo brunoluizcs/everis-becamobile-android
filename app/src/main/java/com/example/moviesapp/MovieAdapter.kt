@@ -1,5 +1,6 @@
 package com.example.moviesapp
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,15 +12,23 @@ import kotlinx.android.synthetic.main.movie_item.view.*
 
 
 class MovieAdapter (
-    private val movies : List<Movies>
+    private val context: Context,
+    private val movies : List<Movies>,
+    private val listener: (Movies) -> Unit
 ) : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>(){
 
     class MovieViewHolder(view : View) : RecyclerView.ViewHolder(view){
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
-        fun bindMovie(movie : Movies){
+        fun bindMovie(movie : Movies, listener: (Movies) -> Unit){
             itemView.movie_title.text = movie.title
             itemView.movie_release_date.text = movie.release
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
+
+            /*itemView.setOnClickListener {
+                Log.i("click","Id:"+movie.id+"Title:"+movie.title)
+            }*/
+            itemView.setOnClickListener {listener(movie)}
+
         }
     }
 
@@ -32,6 +41,7 @@ class MovieAdapter (
     override fun getItemCount(): Int = movies.size
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        holder.bindMovie(movies.get(position))
+        holder.bindMovie(movies.get(position),listener)
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.moviesapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,15 +15,25 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    companion object{
+        val INTENT_PARCELABLE = "OBJECT_INTENT"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         rv_movie_list.layoutManager = LinearLayoutManager(this)
         rv_movie_list.setHasFixedSize(true)
+
         getMovieData { movies : List<Movies> ->
-            rv_movie_list.adapter = MovieAdapter(movies)
+            rv_movie_list.adapter = MovieAdapter(this,movies){
+                val intent = Intent(this,MovieDetails::class.java)
+                intent.putExtra(INTENT_PARCELABLE,it)
+                startActivity(intent)
+            }
         }
+
     }
 
     private fun getMovieData(callback: (List<Movies>) -> Unit){
