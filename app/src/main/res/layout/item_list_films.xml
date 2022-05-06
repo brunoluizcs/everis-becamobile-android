@@ -14,7 +14,7 @@
         android:clickable="true"
         app:cardCornerRadius="16dp"
         android:elevation="10dp"
-        android:padding="2dp"
+        android:layout_margin="2dp"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -28,6 +28,7 @@
                 android:layout_width="115dp"
                 android:layout_height="190dp"
                 android:scaleType="fitXY"
+                android:layout_margin="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

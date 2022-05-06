@@ -9,6 +9,7 @@ import com.nttdata.test.everis_becamobile_android.databinding.ActivityDetailsBin
 import com.nttdata.test.everis_becamobile_android.model.FilmsApiResult
 import com.nttdata.test.everis_becamobile_android.model.details_films.DetailsFilmsOb
 import com.nttdata.test.everis_becamobile_android.repository.DetailsFilmsRepository
+import com.nttdata.test.everis_becamobile_android.utils.Network
 import com.nttdata.test.everis_becamobile_android.viewmodel.DetailsViewModel
 import com.nttdata.test.everis_becamobile_android.viewmodel.DetailsViewModelFactory
 import retrofit2.Retrofit
@@ -20,18 +21,9 @@ class DetailsActivity : AppCompatActivity() {
     private lateinit var detailsRepository: DetailsFilmsRepository
     private lateinit var detailsFactory: DetailsViewModelFactory
 
-    private val retrofit by lazy {
-        Retrofit.Builder()
-            .baseUrl("https://api.themoviedb.org/3/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
     private val detailsFilmsClient: IDetailsFilmsClient by lazy {
-        retrofit.create(IDetailsFilmsClient::class.java)
+        Network.getRetrofitInstance().create(IDetailsFilmsClient::class.java)
     }
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
