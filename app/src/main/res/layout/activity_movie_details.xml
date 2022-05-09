@@ -17,24 +17,24 @@
 
     <TextView
         android:id="@+id/title_details"
-        android:layout_width="413dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="19dp"
+        android:layout_width="396dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
         android:text="Título do Filme"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/poster_details" />
 
     <TextView
         android:id="@+id/genero_details"
-        android:layout_width="399dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="375dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="15dp"
         android:text="Genero do Filme"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -45,14 +45,15 @@
 
     <TextView
         android:id="@+id/overview_details"
-        android:layout_width="416dp"
-        android:layout_height="136dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="356dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
         android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/genero_details" />
 </androidx.constraintlayout.widget.ConstraintLayout>

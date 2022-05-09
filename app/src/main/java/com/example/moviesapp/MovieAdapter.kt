@@ -1,9 +1,13 @@
 package com.example.moviesapp
 
 import android.content.Context
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.moviesapp.databinding.ActivityMainBinding
@@ -21,6 +25,8 @@ class MovieAdapter (
         private val IMAGE_BASE = "https://image.tmdb.org/t/p/w500/"
         fun bindMovie(movie : Movies, listener: (Movies) -> Unit){
             itemView.movie_title.text = movie.title
+            itemView.movie_vote.text = "Avaliação: " + movie.vote
+            //itemView.movie_release_date.text = movie.release
             itemView.movie_release_date.text = movie.release
             Glide.with(itemView).load(IMAGE_BASE + movie.poster).into(itemView.movie_poster)
 
