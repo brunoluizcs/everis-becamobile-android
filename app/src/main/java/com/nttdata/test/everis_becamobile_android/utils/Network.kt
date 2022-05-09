@@ -7,7 +7,7 @@ class Network {
     companion object{
         fun getRetrofitInstance(): Retrofit {
             return Retrofit.Builder()
-                .baseUrl(Util.apiURL)
+                .baseUrl(Constants.apiURL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }

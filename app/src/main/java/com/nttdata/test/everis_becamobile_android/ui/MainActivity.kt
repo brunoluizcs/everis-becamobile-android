@@ -1,5 +1,6 @@
 package com.nttdata.test.everis_becamobile_android.ui
 
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
@@ -18,15 +19,13 @@ import com.nttdata.test.everis_becamobile_android.databinding.ActivityMainBindin
 import com.nttdata.test.everis_becamobile_android.model.AdapterHelperClass
 import com.nttdata.test.everis_becamobile_android.repository.FilmsRepository
 import com.nttdata.test.everis_becamobile_android.repository.GenreRepository
+import com.nttdata.test.everis_becamobile_android.utils.Constants
 import com.nttdata.test.everis_becamobile_android.utils.Network
-import com.nttdata.test.everis_becamobile_android.utils.Util
 import com.nttdata.test.everis_becamobile_android.viewmodel.FilmsViewModel
 import com.nttdata.test.everis_becamobile_android.viewmodel.FilmsViewModelFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 
 //Chave da API (v3 auth)= a822459f243b669b1a5d829c771e50e7
@@ -35,16 +34,15 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
     private var adapterHelperList: MutableList<AdapterHelperClass> = ArrayList()
-    private val binding by lazy {
-        ActivityMainBinding.inflate(layoutInflater)
-    }
+    private var languageSelected:String? = null
+    private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
 
-    private val filmsClient: IFilmsClient by lazy {
-        Network.getRetrofitInstance().create(IFilmsClient::class.java)
-    }
-    private val genreClient: IGenreClient by lazy {
-        Network.getRetrofitInstance().create(IGenreClient::class.java)
-    }
+    private val filmsClient: IFilmsClient by lazy { Network.getRetrofitInstance().create(IFilmsClient::class.java) }
+    private val genreClient: IGenreClient by lazy { Network.getRetrofitInstance().create(IGenreClient::class.java) }
+
+    //private val sharedPref = getPreferences(Context.MODE_PRIVATE)
+    private val defaultValue = "en-EN"
+    //val languageSelected = sharedPref.getString(Constants.language, defaultValue)
 
     private val filmsRepository = FilmsRepository(filmsClient)
     private val genresRepository = GenreRepository(genreClient)
@@ -53,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         genresRepository,
         "all",
         "week",
-        "pt-BR"
+        defaultValue
     )
     private val filmsViewModel by viewModels<FilmsViewModel> { filmsFactory }
 
@@ -70,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         setupUi()
 
+        binding.ivProfile.setOnClickListener { startActivity(Intent(this,ConfigActivity::class.java)) }
     }
 
     private fun configNightMode() {
@@ -79,56 +78,81 @@ class MainActivity : AppCompatActivity() {
                 binding.recyclerViewListFilms.background.setTint(this.resources.getColor(R.color.black_mais_fraco))
                 binding.searchView.background.setTint(this.resources.getColor(R.color.black_mais_fraco))
             }
-            Configuration.UI_MODE_NIGHT_NO -> {}
-            Configuration.UI_MODE_NIGHT_UNDEFINED -> {}
+            Configuration.UI_MODE_NIGHT_NO -> {
+                binding.sliderDestaques.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+                binding.recyclerViewListFilms.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+                binding.searchView.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+            }
+            Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                binding.sliderDestaques.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+                binding.recyclerViewListFilms.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+                binding.searchView.background.setTint(this.resources.getColor(R.color.cinza_fraco))
+            }
         }
     }
 
     private fun setupUi() {
         configAdapter()
 
+
     }
 
     private fun setupSearchView(list: MutableList<AdapterHelperClass>) {
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.searchView.clearFocus()
-                if (!query.isNullOrEmpty()){
+
+                if (!query.isNullOrEmpty()) {
                     val newList: MutableList<AdapterHelperClass> = ArrayList()
                     list.forEach {
                         val title = it.film!!.title
                         val name = it.film!!.name
                         Log.d("result", "title: $title + $name")
-                        if (!title.isNullOrEmpty() && title.uppercase().contains(query.uppercase())){
+                        if (!title.isNullOrEmpty() && title.uppercase()
+                                .contains(query.uppercase())
+                        ) {
                             newList.add(it)
-                        }else if (title.isNullOrEmpty() && name.uppercase().contains(query.uppercase())){
+                        } else if (title.isNullOrEmpty() && name.uppercase()
+                                .contains(query.uppercase())
+                        ) {
                             newList.add(it)
                         }
                     }
                     //Log.d("result", "onQueryTextSubmit: $newList")
-                    if (newList.isNotEmpty()){
+                    if (newList.isNotEmpty()) {
                         setListAdapter(newList)
-                    }else {
+                    } else {
                         setListAdapter(adapterHelperList)
-                        Toast.makeText(applicationContext, "Filme Não encontrado", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "Filme Não encontrado",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
 
                 }
+
+                if (query != null) {
+                    binding.searchView.setQuery("",false)
+                }
+                binding.searchView.setIconifiedByDefault(true)
+                binding.searchView.clearFocus()
                 return false
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
+
                 return false
             }
 
         })
+
+
     }
 
     private fun configAdapter() {
         adapterFilms = AdapterFilms()
 
         adapterFilms.onClickListener = { filmId ->
-            Toast.makeText(this, "Item Clicado", Toast.LENGTH_SHORT).show()
             startDatailsActiviy(filmId)
         }
 
@@ -148,12 +172,12 @@ class MainActivity : AppCompatActivity() {
     private fun getDataFilms() {
         filmsViewModel.fetchFilmsFromRetrofit()
         filmsViewModel.adapterHelper.observe(this) { films ->
-            if (films!=null){
+            if (films != null) {
                 setListAdapter(films)
                 setSliderView(films)
 
                 adapterHelperList.addAll(films.toMutableList())
-                if (adapterHelperList!= null){
+                if (adapterHelperList != null) {
                     setupSearchView(adapterHelperList)
                 }
             }
@@ -209,27 +233,38 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             var count = 0
-            var list : MutableList<SlideUIModel> = ArrayList()
+            var list: MutableList<SlideUIModel> = ArrayList()
             films.sortedBy { it.film?.vote_average }
             films.reversed()
-            withContext(Dispatchers.IO){
-                while (count <= 5){
-                    if (!films[count].film?.title.isNullOrEmpty()){
-                        list.add(SlideUIModel("https://image.tmdb.org/t/p/w500"+films[count].film!!.backdrop_path, films[count].film!!.title))
+            withContext(Dispatchers.IO) {
+                while (count <= 5) {
+                    if (!films[count].film?.title.isNullOrEmpty()) {
+                        list.add(
+                            SlideUIModel(
+                                "https://image.tmdb.org/t/p/w500" + films[count].film!!.backdrop_path,
+                                films[count].film!!.title
+                            )
+                        )
                         count++
-                    }else{
-                        list.add(SlideUIModel("https://image.tmdb.org/t/p/w500"+films[count].film!!.backdrop_path, films[count].film!!.name))
+                    } else {
+                        list.add(
+                            SlideUIModel(
+                                "https://image.tmdb.org/t/p/w500" + films[count].film!!.backdrop_path,
+                                films[count].film!!.name
+                            )
+                        )
                         count++
                     }
                 }
                 binding.sliderDestaques.setImageList(list)
             }
 
-            binding.sliderDestaques.setItemClickListener(object :ItemClickListener{
+            binding.sliderDestaques.setItemClickListener(object : ItemClickListener {
                 override fun onItemClick(model: SlideUIModel, position: Int) {
                     films.forEach {
-                        if (model.title.equals(it.film?.title)||
-                            model.title.equals(it.film?.name)){
+                        if (model.title.equals(it.film?.title) ||
+                            model.title.equals(it.film?.name)
+                        ) {
                             it.film?.let { it1 -> startDatailsActiviy(it1.id) }
                         }
                     }

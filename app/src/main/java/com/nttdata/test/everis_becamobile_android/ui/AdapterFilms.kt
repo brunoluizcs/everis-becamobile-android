@@ -50,12 +50,12 @@ class AdapterFilms : ListAdapter<AdapterHelperClass, AdapterFilms.ViewHolder>(DI
             }
 
             var str = ""
-                helper.listGenre?.forEach { filmGenreId ->
-                    if (helper.film!!.genre_ids.contains(filmGenreId.id)){
-                        str += filmGenreId.name+", "
+            helper.listGenre?.forEach { filmGenreId ->
+                if (helper.film!!.genre_ids.contains(filmGenreId.id)) {
+                    str += filmGenreId.name + ", "
 
-                    }
                 }
+            }
             binding.tvItemGenere.text = str.dropLast(2)
 
             binding.tvItemDescription.text = helper.film!!.overview

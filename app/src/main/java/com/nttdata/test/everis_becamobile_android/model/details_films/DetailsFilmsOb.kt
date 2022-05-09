@@ -1,5 +1,9 @@
 package com.nttdata.test.everis_becamobile_android.model.details_films
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class DetailsFilmsOb(
     val adult: Boolean,
     val backdrop_path: String,
@@ -7,6 +11,7 @@ data class DetailsFilmsOb(
     val budget: Int,
     val genres: List<Genre>,
     val homepage: String,
+    @PrimaryKey
     val id: Int,
     val imdb_id: String,
     val original_language: String,

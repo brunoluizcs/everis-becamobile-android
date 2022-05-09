@@ -1,10 +1,16 @@
 package com.nttdata.test.everis_becamobile_android.model.trending_films
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class JsonFilms(
     val page: Int,
     val results: List<Result>,
     val total_pages: Int,
-    val total_results: Int
+    val total_results: Int,
+    @PrimaryKey(autoGenerate = true)
+    val id:Int
 )
 
 fun jsonFilmsMock() = listOf(
@@ -34,6 +40,7 @@ fun jsonFilmsMock() = listOf(
             )
         ),
         6,
+        2,
         2
     )
 )
