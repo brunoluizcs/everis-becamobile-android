@@ -27,7 +27,7 @@ Terceiro dia, apresentar os detalhes do filme escolhido usando novamente corouti
 # 05/05
 Quarto dia, implementei a arquitetura MVVM sem muitas dificuldades também e melhorei a UI para ficar mais apresentavel.
 
-#0 6/05
+# 06/05
 Quinto dia, dei a opção do usuario procurar qual filme ele desejava usando uma searchView.
 
 # Futuras implementações
