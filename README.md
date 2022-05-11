@@ -30,6 +30,10 @@ Quarto dia, implementei a arquitetura MVVM sem muitas dificuldades também e mel
 ## 06/05
 Quinto dia, dei a opção do usuario procurar qual filme ele desejava usando uma searchView.
 
+## Demo
+![WhatsApp-Video-2022-05-11-at-07 05 48](https://user-images.githubusercontent.com/62394541/167825607-d43752d3-3f3b-4364-9618-03514297e40c.gif)
+
+
 ## Futuras implementações
 Pretendo usar o room para persistencia de dados, testes unitarios e clean code.
 
