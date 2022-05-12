@@ -22,3 +22,6 @@ As bibliotecas abaixo podem ajuda-lo a lidar com alguns desafios deste projeto.
 
 https://user-images.githubusercontent.com/103140224/167655940-5fc2a225-2b2f-408a-a46e-8bad354a165c.mp4
 
+Documentação Arquitetura MVVM
+
+[AnaClaudia_ArquiteturaMVVM.pdf](https://github.com/annecgs/everis-becamobile-android/files/8679912/AnaClaudia_ArquiteturaMVVM.pdf)
