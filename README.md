@@ -14,6 +14,9 @@ As bibliotecas abaixo podem ajuda-lo a lidar com alguns desafios deste projeto.
 - Biblioteca para carregamento de imagens https://github.com/square/picasso
 - Biblioteca para requisições http https://github.com/square/retrofit
 
+### Documentação MVVM + Clear Architecture 
+https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Ftheylonf%2Feveris-becamobile-android%2FTheylon_de_Paiva_Feitosa_-_BECA_ANDROID_NTT_DATA_-_APP_FILMES%2FDocumenta%25C3%25A7%25C3%25A3o%2520MVVM%2520%252B%2520Arquitetura%2520Limpa.docx&wdOrigin=BROWSELINK
+
 # Review da solução do problema
 ## 02/05
 O primeiro dia do desafio foi o mais tranquilo, olhei e estudei a API necessaria para o projeto, fiz um rascunho em uma folha de papel de como eu queria que fosse o layout e fiz a UI básica.
