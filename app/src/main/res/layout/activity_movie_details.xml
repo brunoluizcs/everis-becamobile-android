@@ -8,6 +8,7 @@
 
     <ImageView
         android:id="@+id/poster_details"
+        android:contentDescription = "@string/Poster"
         android:layout_width="418dp"
         android:layout_height="212dp"
         app:layout_constraintEnd_toEndOf="parent"

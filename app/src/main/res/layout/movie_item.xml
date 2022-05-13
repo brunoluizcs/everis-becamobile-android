@@ -12,6 +12,7 @@
 
     <ImageView
         android:id="@+id/movie_poster"
+        android:contentDescription = "@string/Poster"
         android:layout_width="300px"
         android:layout_height="0dp"
         android:scaleType="centerCrop"

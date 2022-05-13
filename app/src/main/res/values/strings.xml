@@ -2,4 +2,5 @@
     <string name="app_name">MoviesApp</string>
     <string name="avaliacao">Avaliação:</string>
     <string name="lancamento">Lançamento:</string>
+    <string name="Poster">Poster do Filme</string>
 </resources>
