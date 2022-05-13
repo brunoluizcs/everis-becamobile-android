@@ -9,8 +9,6 @@ import com.example.moviesapp.model.Movies
 
 class MovieDetails : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_details)
@@ -27,5 +25,4 @@ class MovieDetails : AppCompatActivity() {
             Glide.with(movieImage).load(IMAGE_BASE + movie.poster).into(movieImage)
         }
     }
-
 }

@@ -10,5 +10,5 @@ data class MovieResponse(
     val movies: List<Movies>
 
 ) : Parcelable {
-    constructor():this(mutableListOf())
+    constructor() : this(mutableListOf())
 }
