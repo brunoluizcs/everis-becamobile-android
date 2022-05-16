@@ -32,3 +32,7 @@ Documentação Boas Práticas com Ktlint
 Aplicação de Acessibilidade no AppMovies
 
 Para verficar se o contrastre de cores está adequado utilizei este site https://webaim.org/resources/contrastchecker/ para analisar o constraste da cor do background com o texto de cor branca e obtive o resultado de 19.02:1, para o texto de cor azul o resultado foi de 8.28:1 e para o texto de cor amarelo o resultado foi de 8.82:1
+
+Vídeo Aplicação de Acessibilidade
+https://loom.com/share/b4ca9150e2b54d93bf8f39c58ef9a338
+
