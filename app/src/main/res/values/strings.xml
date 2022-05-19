@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NTT FLIX</string>
+    
+    <string-array name="languages">
+        <item>default</item>
+        <item>en-EN</item>
+        <item>es-ES</item>
+        <item>pt-BR</item>
+    </string-array>
+</resources>
