@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg_main"
-    tools:context=".ui.ConfigActivity">
+    tools:context=".presentation.ui.ConfigActivity">
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:layout_width="120dp"

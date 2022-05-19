@@ -47,6 +47,10 @@ dependencies {
     //Lottie
     implementation 'com.airbnb.android:lottie:5.0.3'
 
+    //Koin
+    implementation 'io.insert-koin:koin-core:3.2.0'
+    implementation 'io.insert-koin:koin-test:3.2.0'
+
     //Slider
     implementation 'com.github.Fuadafdhal:Auto-Image-Slider:1.0'
 

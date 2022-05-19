@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Everisbecamobileandroid">
         <activity
-            android:name=".ui.ConfigActivity"
+            android:name="com.nttdata.test.everis_becamobile_android.presentation.ui.ConfigActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SplashActivity"
+            android:name="com.nttdata.test.everis_becamobile_android.presentation.ui.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +25,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.DetailsActivity"
+            android:name="com.nttdata.test.everis_becamobile_android.presentation.ui.DetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.nttdata.test.everis_becamobile_android.presentation.ui.MainActivity"
             android:exported="true"></activity>
     </application>
 

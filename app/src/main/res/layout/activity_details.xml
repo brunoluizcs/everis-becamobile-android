@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_main"
-    tools:context=".ui.DetailsActivity">
+    tools:context=".presentation.ui.DetailsActivity">
 
     <ImageView
         android:id="@+id/iv_detailsLogo"
@@ -132,23 +132,29 @@
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_weight="1"
+                            android:contentDescription="Adicionar a playList"
                             android:clickable="true"
-                            android:src="@drawable/ic_add_24" />
+                            android:src="@drawable/ic_add_24"
+                            android:focusable="true" />
 
 
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:layout_weight="1"
+                            android:contentDescription="Play video"
                             android:clickable="true"
-                            android:src="@drawable/ic_play_24" />
+                            android:src="@drawable/ic_play_24"
+                            android:focusable="true" />
 
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_weight="1"
                             android:clickable="true"
-                            android:src="@drawable/ic_non_favorite_24" />
+                            android:contentDescription="Favoritar"
+                            android:src="@drawable/ic_non_favorite_24"
+                            android:focusable="true" />
 
                     </LinearLayout>
 
